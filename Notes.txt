@@ -1,0 +1,39 @@
+-- ExpressJS: ExpressJS is a fast, unopinionted minimilist web framework for NodeJS
+    - http://www.expressjs.com
+
+    - ExpressJS is a web application framework for NodeJS. It provides various features that make web application development fast and easy which otherwise takes more time using only NodeJS.
+    - ExpressJS is based on the NodeJS middleware module called 'connect' which in turn uses 'http' module.
+    - So, any middleware which is based on connect will also work with ExpressJS.
+    - ExpressJS -> connect -> http -> NodeJS
+
+-- Advantages of ExpressJS:
+    1. Makes NodeJS web application development fast and easy
+    2. Easy to configure and customize
+    3. Allows you to define routes of your application based on HTTP methods and URLs
+    4. Includes various middleware modules which you can use to perform additional tasks on request and response
+    5. Easy to integrate with different template engines like., Jade, Vash, EJS etc.,
+    6. Allows you to define an error handling middleware
+    7. Easy to serve static files and resources of your application.
+    8. Allows you to create REST API server
+    9. Easy to connect with databases such as MongoDB, MySql 
+
+-- Install: > npm install --save express (local) (or) > npm install -g express (global)
+
+-- ExpressJS Web Application: ExpressJS provides an easy way to create web server and render HTML pages for different HTTP requests by configuring routes for your application.
+
+-- Configure Routes: Use app object to define routes of your application. The app object includes get(), post(), put(), and delete() methods to define routes for HTTP, GET, POST, PUT, and DELETE requests respectively.
+
+- Handle POST request: posting the form data
+- Body Parser: To handle HTTP POST request in ExpressJS we need to install the middleware called 'body-parser'. The middleware was a part of ExpressJS easrlier but not you have to install it separatly.
+>  npm install --save body-parser
+
+- Serving Static Resources in NodeJS: the static resources are like images, css, javascript or other static files using 'ExpressJS' and 'node-static' module.
+
+- Serve Static Resources using ExpressJS: To serve static files using built-in middleware in ExpressJS called 'express.static'. Using express.static() method, we can server static resources directly by specifying the folder name where we have stored static resources.
+
+- Serve Resources from different folders: app.use('/images', express.static(__dirname + '/images'));
+- Setting Virtual Path: app.use('/resources', express.static(__dirname + '/images'));
+
+- Serve Static Resources using Node-static module: To use 'node-static' to serve static resources. The 'node-static' module is an HTTP static-file server module with built-in caching.
+> npm install node-static
+After installing the 'node-static', we can create static file server in NodeJS serves static files only.  
